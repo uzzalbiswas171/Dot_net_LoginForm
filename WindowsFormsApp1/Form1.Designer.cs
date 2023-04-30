@@ -38,6 +38,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.countryListbox = new System.Windows.Forms.ListBox();
+            this.searchtb = new System.Windows.Forms.TextBox();
+            this.searchBt = new System.Windows.Forms.Button();
+            this.statusLb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbName
@@ -89,7 +95,7 @@
             this.tbAddress.Location = new System.Drawing.Point(244, 201);
             this.tbAddress.Multiline = true;
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(322, 124);
+            this.tbAddress.Size = new System.Drawing.Size(322, 115);
             this.tbAddress.TabIndex = 3;
             // 
             // label1
@@ -128,12 +134,97 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Address";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Bangladesh",
+            "India",
+            "Pakistan",
+            "Bhutan",
+            "Maynamer",
+            "UK",
+            "USA",
+            ""});
+            this.comboBox1.Location = new System.Drawing.Point(622, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(151, 28);
+            this.comboBox1.TabIndex = 10;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(639, 101);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(113, 24);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // countryListbox
+            // 
+            this.countryListbox.AccessibleName = "countryListbox";
+            this.countryListbox.FormattingEnabled = true;
+            this.countryListbox.ItemHeight = 20;
+            this.countryListbox.Items.AddRange(new object[] {
+            "Banguladesh",
+            "Australia",
+            "India",
+            "Pakistan",
+            "Bhutan",
+            "Maynmer",
+            "china",
+            "nepal",
+            "japan",
+            "Usa",
+            "UK"});
+            this.countryListbox.Location = new System.Drawing.Point(632, 131);
+            this.countryListbox.Name = "countryListbox";
+            this.countryListbox.Size = new System.Drawing.Size(120, 124);
+            this.countryListbox.TabIndex = 12;
+            // 
+            // searchtb
+            // 
+            this.searchtb.AccessibleName = "searchboxtb";
+            this.searchtb.Location = new System.Drawing.Point(633, 271);
+            this.searchtb.Name = "searchtb";
+            this.searchtb.Size = new System.Drawing.Size(119, 26);
+            this.searchtb.TabIndex = 13;
+            this.searchtb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // searchBt
+            // 
+            this.searchBt.AccessibleName = "Searchbtn";
+            this.searchBt.Location = new System.Drawing.Point(633, 311);
+            this.searchBt.Name = "searchBt";
+            this.searchBt.Size = new System.Drawing.Size(119, 29);
+            this.searchBt.TabIndex = 14;
+            this.searchBt.Text = "Search";
+            this.searchBt.UseVisualStyleBackColor = true;
+            this.searchBt.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // statusLb
+            // 
+            this.statusLb.AccessibleName = "statuslbl";
+            this.statusLb.AutoSize = true;
+            this.statusLb.Location = new System.Drawing.Point(635, 355);
+            this.statusLb.Name = "statusLb";
+            this.statusLb.Size = new System.Drawing.Size(56, 20);
+            this.statusLb.TabIndex = 15;
+            this.statusLb.Text = "Status";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statusLb);
+            this.Controls.Add(this.searchBt);
+            this.Controls.Add(this.searchtb);
+            this.Controls.Add(this.countryListbox);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -146,6 +237,7 @@
             this.Controls.Add(this.tbName);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,6 +255,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ListBox countryListbox;
+        private System.Windows.Forms.TextBox searchtb;
+        private System.Windows.Forms.Button searchBt;
+        private System.Windows.Forms.Label statusLb;
     }
 }
 
